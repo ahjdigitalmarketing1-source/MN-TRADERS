@@ -82,9 +82,12 @@ th{font-size:12px;color:#475467;background:#fafafa;position:sticky;top:0}
   .brand-sub{display:none}.logout{padding:8px 10px;font-size:12px}
 }
 @media print{
-  .hero,.nav,.status,.no-print,button{display:none!important}
-  body{background:#fff}.layout{display:block;padding:0}.panel{box-shadow:none;border:0}
-  .invoice,.receipt{border:0;max-width:none}
+  body{background:#fff!important}
+  body *{visibility:hidden!important}
+  .invoice,.invoice *{visibility:visible!important}
+  .receipt,.receipt *{visibility:visible!important}
+  .invoice,.receipt{position:absolute!important;left:0!important;top:0!important;width:100%!important;max-width:none!important;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:12mm!important;background:#fff!important}
+  .invoice .no-print,.receipt .no-print{display:none!important}
 }
 </style>
 </head>
